@@ -1,0 +1,50 @@
+# 密钥 / 服务器配置
+infra/config.py
+**/config.local.py
+*.env
+.env*
+secrets.*
+*credentials*
+# 核心 IP
+themes/
+loras/
+refs/
+lora_workspace/
+lora_train/
+# 生成内容 / 运行产物
+book_output/
+stories/
+scripts/
+logs/
+prompt_log.json
+flow_check.txt
+*_cache/
+_*_cache/
+*.mp4
+# 备份 / 杂物
+*.bak
+*.backup*
+*副本*
+版本副本
+各部分作用
+常用口令
+问题与对策*
+# Python / 环境
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+docs/PROJECT_STATUS.md
+infra/win10_v235_setup.py
+tools/tts_test.py
+test_v235.py
+test_v260_multichar.py
+*.0527backup
