@@ -1,3 +1,4 @@
+from config import SOVITS_URL
 """
 to_pipeline.py ── 长故事 → pipeline 兼容格式（Step 6）v2.3.3
 ==========================================================
@@ -810,7 +811,7 @@ def convert_to_pipeline(storyboard_path: str,
               f"{len(chars_with_portrait)} 角色,可进入主管线:")
         print(f"    python run.py twophase {out_path}")
         print(f"    python run.py produce  {out_path} --platform douyin "
-              f"--sovits http://YOUR_SOVITS_HOST:9880")
+              f"--sovits {SOVITS_URL}")
     elif chars_with_portrait and chars_without_portrait:
         # 部分就位
         print(f"    ⚠ portrait_ref 部分就位:")

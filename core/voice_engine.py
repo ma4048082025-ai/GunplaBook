@@ -1,3 +1,4 @@
+from config import SOVITS_URL
 """
 voice_engine.py ── 角色配音引擎 v2
 ======================================
@@ -140,7 +141,7 @@ class VoiceConfig:
 class VoiceEngine:
 
     def __init__(self, story,
-                 sovits_host: str = "http://YOUR_SOVITS_HOST:9880",
+                 sovits_host: str = None,
                  default_voice: str = "zh-CN-YunxiNeural"):
         self.story         = story
         self.sovits_host   = sovits_host.rstrip("/") if sovits_host else ""
@@ -391,7 +392,7 @@ def _cli_main():
     parser.add_argument("--char-list", action="store_true", help="列出角色配置")
     parser.add_argument("--no-play",   action="store_true", help="不自动播放")
     parser.add_argument("--sovits",
-                        default="http://YOUR_SOVITS_HOST:9880",
+                        default=SOVITS_URL,
                         help="GPT-SoVITS 服务地址")
     args = parser.parse_args()
 

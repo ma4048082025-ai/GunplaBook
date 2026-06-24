@@ -88,7 +88,7 @@ import argparse
 
 def _init(story_path: str, theme_path: str = None, no_ip: bool = False):
     from comfy_script.runtime import load
-    from config import COMFY_SERVER
+    from config import COMFY_SERVER, SOVITS_URL
     from pipeline import set_skip_ipadapter
 
     print(f"连接 ComfyUI...")
@@ -192,7 +192,7 @@ def cmd_produce(story_path: str,
     """
     _init(story_path, theme_path, no_ip)
     if not sovits_host:
-        sovits_host = "http://YOUR_SOVITS_HOST:9880"
+        sovits_host = SOVITS_URL
         print(f"  [produce] 未指定 --sovits，使用默认地址: {sovits_host}")
     theme, story = _load_configs(story_path, theme_path)
 
@@ -371,7 +371,7 @@ def cmd_reset(story_path: str = None, all_stories: bool = False):
 def cmd_inventory():
     """查看 ComfyUI 服务器上的模型清单。"""
     from comfy_script.runtime import load
-    from config import COMFY_SERVER
+    from config import COMFY_SERVER, SOVITS_URL
     import requests
 
     print(f"连接 ComfyUI...")
@@ -444,7 +444,7 @@ def cmd_full(story_path: str,
     """
     # 默认 sovits 地址（不传时自动填）
     if not sovits_host:
-        sovits_host = "http://YOUR_SOVITS_HOST:9880"
+        sovits_host = SOVITS_URL
         print(f"  [full] 未指定 --sovits，使用默认地址: {sovits_host}")
 
     print("\n" + "=" * 55)

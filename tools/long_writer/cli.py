@@ -1,3 +1,4 @@
+from config import SOVITS_URL
 """
 cli.py ── 长故事生产全流程入口
 ====================================
@@ -661,7 +662,7 @@ def cmd_new(args):
     print("  ✓ 长故事完成，已就绪进入主管线:")
     print(f"    python run.py twophase {pipeline_yaml}")
     print(f"    python run.py produce  {pipeline_yaml} --platform douyin "
-          f"--sovits http://YOUR_SOVITS_HOST:9880")
+          f"--sovits {SOVITS_URL}")
     print("="*60)
 
 
