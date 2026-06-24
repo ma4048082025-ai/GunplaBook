@@ -19,7 +19,7 @@ character art, voice-over, and final edit.*
 ## Architecture
 
 <p align="center">
-  <img src="docs/architecture.png" alt="System architecture" width="900">
+  <img src="docs/architecture.svg" alt="System architecture" width="900">
 </p>
 
 ---
